@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pphingkh <pphingkh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 18:05:13 by pphingkh          #+#    #+#             */
-/*   Updated: 2023/09/13 17:21:04 by pphingkh         ###   ########.fr       */
+/*   Created: 2023/09/13 20:14:23 by pphingkh          #+#    #+#             */
+/*   Updated: 2023/09/13 20:47:01 by pphingkh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//The memset() function writes n bytes of value c 
-//(converted to an **	unsigned char) to the string s.
-void	*ft_memset(void *b, int c, size_t len)
+int	strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t		i;
-	char		*temp;
+	size_t	i;
 
 	i = 0;
-	temp = b;
-	while (i < len)
+	while (i < n && (s1[i] != '\0' || s2[i] != '\0'))
 	{
-		temp[i] = c;
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
 		i++;
 	}
-	return (temp); 
+	return (0);
 }
-// Because func is void * so it must return;*/
+	// if (n == 0)
+	// 	return (0);
+	// while (*s1 != 0 && *s2 != 0)
+	// {
+	// 	if (*s1 != *s2 || n == 1)
+	// 		return (*s1 - *s2);
+	// 	s1++;
+	// 	s2++;
+	// 	n--;
+	// }
+	// return (*s1 - *s2); psointer

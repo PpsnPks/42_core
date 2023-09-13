@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pphingkh <pphingkh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 18:05:13 by pphingkh          #+#    #+#             */
-/*   Updated: 2023/09/13 17:21:04 by pphingkh         ###   ########.fr       */
+/*   Created: 2023/09/13 20:04:46 by pphingkh          #+#    #+#             */
+/*   Updated: 2023/09/13 20:12:14 by pphingkh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//The memset() function writes n bytes of value c 
-//(converted to an **	unsigned char) to the string s.
-void	*ft_memset(void *b, int c, size_t len)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t		i;
-	char		*temp;
-
-	i = 0;
-	temp = b;
-	while (i < len)
+	while (*s != 0 && *(s + 1) != 0)
+		s++;
+	while (*s != 0)
 	{
-		temp[i] = c;
-		i++;
+		if (*s == (char) c)
+			return ((char *)s);
+		s--;
 	}
-	return (temp); 
+	return (0);
 }
-// Because func is void * so it must return;*/

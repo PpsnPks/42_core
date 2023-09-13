@@ -6,7 +6,7 @@
 /*   By: pphingkh <pphingkh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 18:31:55 by pphingkh          #+#    #+#             */
-/*   Updated: 2023/09/13 17:12:03 by pphingkh         ###   ########.fr       */
+/*   Updated: 2023/09/13 20:39:05 by pphingkh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,38 @@
 #include <string.h>
 #include <stdio.h>
 
-void	*ft_memset(void *b, int c, size_t len)
+int	strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t		i;
-	char		*temp;
-
-	i = 0;
-	temp = b;
-	while (i < len)
+	if (n == 0)
+		return (0);
+	while (*s1 != 0 && *s2 != 0)
 	{
-		temp[i] = c;
-		i++;
+		if (*s1 != *s2 || n == 1)
+			return (*s1 - *s2);
+		s1++;
+		s2++;
+		n--;
 	}
-	return (temp);
+	return (*s1 - *s2);
 }
+
 
 int	main(void)
 {
-	char	strq[30];
+	char str1[15];
+   char str2[15];
+   int ret;
 
-	ft_memset(strq, '0', sizeof(char) * 30);
-	ft_memset(strq + 1, 43, 3 * sizeof(unsigned char));
-	printf ("%s\n", strq);
-	return (0);
+   strcpy(str1, "aBCDEiop");
+   strcpy(str2, "ABCkklk");
+
+   ret = strncmp(str1, str2, 1);
+    printf("%d\n",ret);
+   if(ret < 0) {
+      printf("str1 is less than str2");
+   } else if(ret > 0) {
+      printf("str2 is less than str1");
+   } else {
+      printf("str1 is equal to str2");
+   }
 }
