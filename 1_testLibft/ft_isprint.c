@@ -6,12 +6,14 @@
 /*   By: pphingkh <pphingkh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 18:59:19 by pphingkh          #+#    #+#             */
-/*   Updated: 2023/09/12 18:05:32 by pphingkh         ###   ########.fr       */
+/*   Updated: 2023/09/14 19:41:49 by pphingkh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
+	int	i;
+
 	if (c >= 32 && c <= 126)
 		return (1);
 	else

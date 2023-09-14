@@ -6,11 +6,11 @@
 /*   By: pphingkh <pphingkh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 19:29:53 by pphingkh          #+#    #+#             */
-/*   Updated: 2023/09/13 19:31:05 by pphingkh         ###   ########.fr       */
+/*   Updated: 2023/09/14 20:00:51 by pphingkh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_c(int c)
+int	ft_tolower(int c)
 {
 	if (c <= 'A' && c >= 'Z')
 	{

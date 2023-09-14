@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pphingkh <pphingkh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 18:05:13 by pphingkh          #+#    #+#             */
-/*   Updated: 2023/09/14 17:23:39 by pphingkh         ###   ########.fr       */
+/*   Created: 2023/09/14 16:21:26 by pphingkh          #+#    #+#             */
+/*   Updated: 2023/09/14 19:56:08 by pphingkh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//The memset() function writes n bytes of value c 
-//(converted to an **	unsigned char) to the string s.
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_bzero(void *s, size_t len)
 {
 	size_t		i;
 
 	i = 0;
 	while (i < len)
 	{
-		(unsigned char)b[i] = c;
+		((unsigned char *)s)[i] = 0;
 		i++;
 	}
-	return (b); 
+	return (s); 
 }
-// Because func is void * so it must return;*/

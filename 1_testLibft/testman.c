@@ -6,7 +6,7 @@
 /*   By: pphingkh <pphingkh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 18:31:55 by pphingkh          #+#    #+#             */
-/*   Updated: 2023/09/13 20:39:05 by pphingkh         ###   ########.fr       */
+/*   Updated: 2023/09/14 19:42:38 by pphingkh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,38 +14,42 @@
 #include <string.h>
 #include <stdio.h>
 
-int	strncmp(const char *s1, const char *s2, size_t n)
+void  *ft_memchr(const void *s, int c, size_t n)
 {
-	if (n == 0)
-		return (0);
-	while (*s1 != 0 && *s2 != 0)
-	{
-		if (*s1 != *s2 || n == 1)
-			return (*s1 - *s2);
-		s1++;
-		s2++;
-		n--;
-	}
-	return (*s1 - *s2);
-}
+   size_t i;
 
+   i = 0;
+   while (i < n)
+	{
+		if (*(unsigned char *) s == (unsigned char)c || *(unsigned char *) s = 0)
+			return ((void *)s);
+	   i++;
+		s++;
+	}
+	return (0);
+}
 
 int	main(void)
 {
-	char str1[15];
-   char str2[15];
-   int ret;
+	char  str1[15];
+   char  str2[10];
+   char  str3[10];
+   char  str4[15];
 
-   strcpy(str1, "aBCDEiop");
-   strcpy(str2, "ABCkklk");
+   strcpy (str1, "1234567890");
+   strcpy (str2, "ABCkklk");
+   strcpy (str3, "123456789");
+   strcpy (str4, "ABCkklk");
 
-   ret = strncmp(str1, str2, 1);
-    printf("%d\n",ret);
-   if(ret < 0) {
-      printf("str1 is less than str2");
-   } else if(ret > 0) {
-      printf("str2 is less than str1");
-   } else {
-      printf("str1 is equal to str2");
-   }
+   printf ("%s\n",ft_memchr (str1,'0',3));
+   printf ("%s\n",ft_memchr (str1,'a',16));
+   printf ("%s\n",ft_memchr (str1,'1',3));
+   printf ("%s\n",ft_memchr (str2,'C',3));
+   printf ("%s\n",ft_memchr (str2,'C',2));
+   printf("----------------\n");
+   printf ("%s\n",memchr (str1,'0',3));
+   printf ("%s\n",memchr (str1,'a',16));
+   printf ("%s\n",memchr (str1,'1',3));
+   printf ("%s\n",memchr (str2,'C',3));
+   printf ("%s\n",memchr (str2,'C',2));
 }
