@@ -6,50 +6,56 @@
 /*   By: pphingkh <pphingkh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 18:31:55 by pphingkh          #+#    #+#             */
-/*   Updated: 2023/09/14 19:42:38 by pphingkh         ###   ########.fr       */
+/*   Updated: 2023/09/15 21:53:38 by pphingkh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ctype.h>
+#include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 
-void  *ft_memchr(const void *s, int c, size_t n)
+int	ft_atoi(const char *str)
 {
-   size_t i;
+	long	sum;
+	int		sign;
+	int		i;
 
-   i = 0;
-   while (i < n)
+	sum = 0;
+	i = 0;
+	sign = 1;
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (str[i] == '+' || str[i] == '-')
 	{
-		if (*(unsigned char *) s == (unsigned char)c || *(unsigned char *) s = 0)
-			return ((void *)s);
-	   i++;
-		s++;
+		if (str[i] == '-')
+			sign = -1;
+		i++;
 	}
-	return (0);
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		sum = (sum * 10) + (str[i] - '0');
+		i++;
+	}
+	return (sum * sign);
 }
 
-int	main(void)
-{
-	char  str1[15];
-   char  str2[10];
-   char  str3[10];
-   char  str4[15];
+int main() {
+   
+   // char  *str1 = "This is a long sentence.";
+   // char  *str2 = "This is a long sentence.";
+   // char  *str3 = "i";
+   // char  *str4 = "i";
+   // char *ans = "answer";
 
-   strcpy (str1, "1234567890");
-   strcpy (str2, "ABCkklk");
-   strcpy (str3, "123456789");
-   strcpy (str4, "ABCkklk");
 
-   printf ("%s\n",ft_memchr (str1,'0',3));
-   printf ("%s\n",ft_memchr (str1,'a',16));
-   printf ("%s\n",ft_memchr (str1,'1',3));
-   printf ("%s\n",ft_memchr (str2,'C',3));
-   printf ("%s\n",ft_memchr (str2,'C',2));
-   printf("----------------\n");
-   printf ("%s\n",memchr (str1,'0',3));
-   printf ("%s\n",memchr (str1,'a',16));
-   printf ("%s\n",memchr (str1,'1',3));
-   printf ("%s\n",memchr (str2,'C',3));
-   printf ("%s\n",memchr (str2,'C',2));
+   printf ("%d\n",atoi("12 345"));
+   printf ("%d\n",atoi("            12345"));
+   printf ("%d\n",atoi("++12345"));
+   printf ("%d\n",atoi("\t+12345"));
+   printf ("--------------------------------\n");
+   printf ("%d\n",ft_atoi("12 345"));
+   printf ("%d\n",ft_atoi("            12345"));
+   printf ("%d\n",ft_atoi("++12345"));
+   printf ("%d\n",ft_atoi("\t+12345"));
 }

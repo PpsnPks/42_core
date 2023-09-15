@@ -6,11 +6,11 @@
 /*   By: pphingkh <pphingkh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 16:21:26 by pphingkh          #+#    #+#             */
-/*   Updated: 2023/09/14 19:56:08 by pphingkh         ###   ########.fr       */
+/*   Updated: 2023/09/15 17:58:51 by pphingkh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_bzero(void *s, size_t len)
+void	ft_bzero(void *s, size_t len)
 {
 	size_t		i;
 

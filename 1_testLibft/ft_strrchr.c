@@ -6,19 +6,22 @@
 /*   By: pphingkh <pphingkh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 20:04:46 by pphingkh          #+#    #+#             */
-/*   Updated: 2023/09/13 20:12:14 by pphingkh         ###   ########.fr       */
+/*   Updated: 2023/09/15 22:23:38 by pphingkh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strrchr(const char *s, int c)
 {
-	while (*s != 0 && *(s + 1) != 0)
-		s++;
-	while (*s != 0)
+	int	i;
+
+	i = 0;
+	while (s[i] != 0)
+		i++;
+	while (i)
 	{
-		if (*s == (char) c)
-			return ((char *)s);
-		s--;
+		--i;
+		if (s[i] == (char) c)
+			return ((char *)s + i);
 	}
 	return (0);
 }

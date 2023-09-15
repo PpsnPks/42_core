@@ -6,7 +6,7 @@
 /*   By: pphingkh <pphingkh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 18:06:37 by pphingkh          #+#    #+#             */
-/*   Updated: 2023/09/12 18:17:41 by pphingkh         ###   ########.fr       */
+/*   Updated: 2023/09/15 22:13:24 by pphingkh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,9 @@ size_t	strlen(const char *s)
 	size_t	count;
 
 	count = 0;
-	while (*s != 0)
+	while (s[count] != 0)
 	{
 		count++;
-		s++;
 	}
 	return (count);
 }
