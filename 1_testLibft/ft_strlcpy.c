@@ -6,9 +6,11 @@
 /*   By: pphingkh <pphingkh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 17:25:06 by pphingkh          #+#    #+#             */
-/*   Updated: 2023/09/15 18:56:13 by pphingkh         ###   ########.fr       */
+/*   Updated: 2023/09/15 23:45:50 by pphingkh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
@@ -27,5 +29,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[i] = 0;
 	return (srclen);
 }
-
-

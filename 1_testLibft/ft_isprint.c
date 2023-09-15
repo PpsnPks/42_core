@@ -6,14 +6,17 @@
 /*   By: pphingkh <pphingkh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 18:59:19 by pphingkh          #+#    #+#             */
-/*   Updated: 2023/09/14 19:41:49 by pphingkh         ###   ########.fr       */
+/*   Updated: 2023/09/15 23:53:40 by pphingkh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
 	int	i;
 
+	i = 0;
 	if (c >= 32 && c <= 126)
 		return (1);
 	else

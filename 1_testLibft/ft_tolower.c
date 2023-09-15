@@ -6,13 +6,15 @@
 /*   By: pphingkh <pphingkh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 19:29:53 by pphingkh          #+#    #+#             */
-/*   Updated: 2023/09/14 20:00:51 by pphingkh         ###   ########.fr       */
+/*   Updated: 2023/09/16 00:22:05 by pphingkh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_tolower(int c)
 {
-	if (c <= 'A' && c >= 'Z')
+	if (c >= 'A' && c <= 'Z')
 	{
 		c += 32;
 	}

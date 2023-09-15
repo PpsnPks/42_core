@@ -6,9 +6,11 @@
 /*   By: pphingkh <pphingkh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 19:33:21 by pphingkh          #+#    #+#             */
-/*   Updated: 2023/09/15 22:11:52 by pphingkh         ###   ########.fr       */
+/*   Updated: 2023/09/15 23:45:39 by pphingkh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

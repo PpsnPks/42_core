@@ -6,11 +6,11 @@
 /*   By: pphingkh <pphingkh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 20:04:32 by pphingkh          #+#    #+#             */
-/*   Updated: 2023/09/14 20:46:24 by pphingkh         ###   ########.fr       */
+/*   Updated: 2023/09/15 23:45:26 by pphingkh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

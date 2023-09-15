@@ -6,9 +6,11 @@
 /*   By: pphingkh <pphingkh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 17:11:46 by pphingkh          #+#    #+#             */
-/*   Updated: 2023/09/15 22:09:15 by pphingkh         ###   ########.fr       */
+/*   Updated: 2023/09/15 23:45:20 by pphingkh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

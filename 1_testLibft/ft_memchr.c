@@ -6,9 +6,11 @@
 /*   By: pphingkh <pphingkh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 16:31:08 by pphingkh          #+#    #+#             */
-/*   Updated: 2023/09/15 22:15:52 by pphingkh         ###   ########.fr       */
+/*   Updated: 2023/09/15 23:45:17 by pphingkh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

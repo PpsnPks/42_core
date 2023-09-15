@@ -6,9 +6,11 @@
 /*   By: pphingkh <pphingkh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 16:21:26 by pphingkh          #+#    #+#             */
-/*   Updated: 2023/09/15 17:58:51 by pphingkh         ###   ########.fr       */
+/*   Updated: 2023/09/15 23:53:15 by pphingkh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t len)
 {
@@ -20,5 +22,4 @@ void	ft_bzero(void *s, size_t len)
 		((unsigned char *)s)[i] = 0;
 		i++;
 	}
-	return (s); 
 }
