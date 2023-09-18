@@ -6,7 +6,7 @@
 /*   By: pphingkh <pphingkh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 19:33:21 by pphingkh          #+#    #+#             */
-/*   Updated: 2023/09/15 23:45:39 by pphingkh         ###   ########.fr       */
+/*   Updated: 2023/09/18 20:21:33 by pphingkh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s + i);
 		i++;
 	}
+	if (s[i] == (char) c)
+		return ((char *)s + i);
 	return (0);
 }
