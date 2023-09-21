@@ -6,7 +6,7 @@
 /*   By: pphingkh <pphingkh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 19:52:50 by pphingkh          #+#    #+#             */
-/*   Updated: 2023/09/21 18:44:50 by pphingkh         ###   ########.fr       */
+/*   Updated: 2023/09/21 22:09:40 by pphingkh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,27 @@ char	*ft_strdup(const char *s1);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
 #endif
+
+// char	*ft_strtrim(char const *s1, char const *set)
+// {
+// 	int		start;
+// 	int		end;
+// 	int		i;
+// 	char	*result;
+
+// 	i = 0;
+// 	result = malloc(sizeof(char) * (ft_strlen(s1) + 1));
+// 	if (!result)
+// 		return (0);
+// 	start = find_start(s1, set);
+// 	end = find_end(s1, set);
+// 	while (start + i < end)
+// 	{
+// 		result[i] = s1[start + i];
+// 		i++;
+// 	}
+// 	result[i] = 0;
+// 	return (result);
+// }
