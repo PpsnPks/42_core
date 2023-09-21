@@ -6,7 +6,7 @@
 /*   By: pphingkh <pphingkh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 18:57:45 by pphingkh          #+#    #+#             */
-/*   Updated: 2023/09/18 22:03:01 by pphingkh         ###   ########.fr       */
+/*   Updated: 2023/09/20 17:55:16 by pphingkh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	i = 0;
 	len_dst = 0;
 	len_src = 0;
-	while (dst[len_dst])
+	while (dst[len_dst] && len_dst < dstsize)
 		len_dst++;
-	while (dst[len_src])
+	while (src[len_src])
 		len_src++;
 	if (dstsize == 0 || dstsize <= len_dst)
 		return (len_src + dstsize);
@@ -34,3 +34,17 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[j] = '\0';
 	return (len_src + len_dst);
 }
+
+// #include <stdio.h>
+// #include <string.h>
+
+// int	main(void)
+// {
+// 	char	dest[30];
+// 	char	*src = (char *)"AAAAAAAAA";
+
+// 	memset (dest, 0, 30);
+// 	dest[0] = 'B';
+// 	printf("%zu",ft_strlcat(dest, src, 0) == strlen(src) && !strcmp(dest, "B"));
+
+// }
