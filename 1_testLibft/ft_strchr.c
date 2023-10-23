@@ -6,7 +6,7 @@
 /*   By: pphingkh <pphingkh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 19:33:21 by pphingkh          #+#    #+#             */
-/*   Updated: 2023/09/21 15:46:01 by pphingkh         ###   ########.fr       */
+/*   Updated: 2023/10/23 23:39:21 by pphingkh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i] != 0)
 	{
-		if (s[i] == (char) c)
+		if (s[i] == (unsigned char) c)
 			return ((char *)s + i);
 		i++;
 	}
-	if (c == 0)
+	if ((char)c == 0)
 		return ((char *)s + i);
 	return (0);
 }

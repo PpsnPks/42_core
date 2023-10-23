@@ -6,7 +6,7 @@
 /*   By: pphingkh <pphingkh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 20:04:46 by pphingkh          #+#    #+#             */
-/*   Updated: 2023/09/18 20:26:35 by pphingkh         ###   ########.fr       */
+/*   Updated: 2023/10/23 23:39:37 by pphingkh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 	i = 0;
 	while (s[i] != 0)
 		i++;
-	if (c == 0)
+	if ((char)c == 0)
 		return ((char *)s + i);
 	while (i)
 	{

@@ -6,7 +6,7 @@
 /*   By: pphingkh <pphingkh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 20:04:32 by pphingkh          #+#    #+#             */
-/*   Updated: 2023/09/15 23:45:26 by pphingkh         ###   ########.fr       */
+/*   Updated: 2023/10/24 00:15:18 by pphingkh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
+	if (src == NULL && dst == NULL)
+		return (NULL);
 	while (i < n)
 	{
 		((char *)dst)[i] = ((const char *)src)[i];
